@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import Error from './components/pages/Error'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Cadastrar from './components/pages/Cadastras';
+import Listar from './components/pages/Listar';
+import Home from './components/pages/Home';
+import Vizualizar from './components/pages/Visualizar';
 
 
 const routes = createBrowserRouter([
@@ -12,6 +17,15 @@ const routes = createBrowserRouter([
       {
         path: "",
         element: <Home />
+      },{
+        path: "/Cadastrar",
+        element: <Cadastrar />
+      },{
+        path: "/Listar",
+        element: <Listar />
+      },{
+        path: "/Calcular",
+        element: <Vizualizar />
       }
     ],
   },
