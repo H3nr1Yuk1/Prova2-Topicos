@@ -3,3 +3,8 @@ body {
     background-color: rgb(38, 38, 38);
     color: whitesmoke;
 }
+
+table td, th {
+    padding: 10px;
+    border:  1px white solid;
+}
