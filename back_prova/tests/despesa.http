@@ -4,5 +4,11 @@ Content-Type: application/json
 
 {
     "descricao" : "Conta de luz",
-    "preco" : 120
+    "preco" : 50
 }
+
+### Listar despesas
+GET http://localhost:3333/listar
+
+### Calcular Media
+GET http://localhost:3333/calcular
