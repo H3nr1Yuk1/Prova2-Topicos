@@ -4,23 +4,23 @@ import { Despesas } from "../../models/despesas.model";
 // import Button from "@mui/material/Button";
 
 function Cadastrar() {
-  const [nome, setNome] = useState("");
+  const [descricao, setDescricao] = useState("");
   const [preco, setPreco] = useState("");
 
   function enviar() {
     //Enviar o produto para a API, através FETCH ou AXIOS
-    let produto: Despesas = new Despesas();
-    despesas.nome = nome;
+    let despesas: Despesas = new Despesas();
+    despesas.descricao = descricao;
     despesas.preco = Number.parseInt(preco);
 
     axios
-      .post("http://localhost:3001", produto)
+      .post("http://localhost:3001", despesas)
       .then((resposta) => {
         //Executar algo quando a requisição for bem sucedida
         //Códigos HTTP na faixa do 200
         //Redirecionar para o componente da listagem
         console.log(resposta.data.mensagem);
-        setNome("");
+        setDescricao("");
         setPreco("");
       })
       .catch((erro) => {
@@ -34,10 +34,10 @@ function Cadastrar() {
     <div>
       <h1> Cadastrar Produto</h1>
       <div>
-        <label>Nome:</label>
+        <label>Descrição:</label>
         <input
           type="text"
-          onChange={(event: any) => setNome(event.target.value)}
+          onChange={(event: any) => setDescricao(event.target.value)}
         />
       </div>
       <div>
@@ -48,9 +48,9 @@ function Cadastrar() {
         />
       </div>
       <div>
-        <Button variant="outlined" color="error" onClick={enviar}>
+        <button onClick={enviar}>
           Cadastrar
-        </Button>
+        </button>
       </div>
     </div>
   );
