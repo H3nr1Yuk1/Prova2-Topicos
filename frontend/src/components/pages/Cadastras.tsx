@@ -14,7 +14,7 @@ function Cadastrar() {
     despesas.preco = Number.parseInt(preco);
 
     axios
-      .post("http://localhost:3001", despesas)
+      .post("http://localhost:3333", despesas)
       .then((resposta) => {
         //Executar algo quando a requisição for bem sucedida
         //Códigos HTTP na faixa do 200
