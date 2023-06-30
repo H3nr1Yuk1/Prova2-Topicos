@@ -1,22 +1,26 @@
 import { Link } from "react-router-dom";
-import "./nav.css";
+import styles from "./nav.module.css";
 
 function Nav() {
   return (
-    <nav>
+    <nav className={styles.nav}>
 
       <ul>
 
         <li>
-          <Link to="/cadastrar">Cadastrar</Link>
+          <Link to='/' className={styles.Link}>Home</Link>
         </li>
 
         <li>
-          <Link to="/listar">Listar</Link>
+          <Link to="/Cadastrar" className={styles.Link}>Cadastrar</Link>
         </li>
 
         <li>
-          <Link to="/visualizar">Visualizar Total e Média</Link>
+          <Link to="/Listar" className={styles.Link}>Listar</Link>
+        </li>
+
+        <li>
+          <Link to="/Vizualizar" className={styles.Link}>Visualizar Total e Média</Link>
         </li>
 
       </ul>

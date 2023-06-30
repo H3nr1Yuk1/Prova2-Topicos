@@ -24,7 +24,7 @@ const routes = createBrowserRouter([
         path: "/Listar",
         element: <Listar />
       },{
-        path: "/Calcular",
+        path: "/Vizualizar",
         element: <Vizualizar />
       }
     ],
